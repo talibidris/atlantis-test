@@ -3,7 +3,7 @@ region = "eu-west-1"
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket-${random_uuid.test}"
+  bucket = "my-tf-test-bucket-${random_uuid.test.result}"
   acl    = "private"
 
   tags {
