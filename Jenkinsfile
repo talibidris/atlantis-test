@@ -4,7 +4,8 @@ pipeline {
     stage('Test') {
         agent { label 'test-cluster'}
         steps {
-            sh 'echo hello from fargate'
+            sh 'terraform init'
+            sh 'terraform plan -auto-approve'
         }
     }
   }
