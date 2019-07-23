@@ -5,7 +5,7 @@ pipeline {
         agent { label 'test-cluster'}
         steps {
             sh 'terraform init'
-            sh 'terraform plan -auto-approve'
+            sh 'terraform plan'
         }
     }
   }
